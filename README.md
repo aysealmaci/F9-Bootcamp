@@ -1,5 +1,5 @@
 <h1>Takım İsmi</h1>
-Takım Flutter 09
+F09 - Kod Şövalyeleri
 
 <h1>Ürün İle İlgili Bilgiler</h1>
 <h2>Takım Elemanları</h2>
@@ -10,6 +10,7 @@ Takım Flutter 09
 <li>Beyza Nur Okatan: Developer</li>
 
 <h2>Ürün İsmi</h2>
+UniConnect
 
 <h2>Product Backlog URL</h2>
 
