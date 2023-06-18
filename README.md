@@ -21,5 +21,10 @@ UniConnect
 <li>Puan tamamlama mantığı: Projede tamamlanması gereken toplam 400 puanlık backlog bulunmaktadır. Araştırma yapma, proje konusuna karar verme gibi durumların yanı sıra takım üyelerinin final takvimi bu sprintte 50 puanın tamamlanması gerektiğine karar verildi./li>
 <li>Daily Scrum: Daily Scrum toplantılarının zamansal nedenlerden dolayı whatsapp üzerinden yapılmasına karar verildi. Bazı daily scrum toplantıları Discord üzerinden gerçekleşti. Daily Scrum toplantılarından bazı ekran görüntüleri paylaşılan Google doc üzerinden incelenebilir: <a href="https://docs.google.com/document/d/1yGjhoHgQCITzUuw37A3ZoLZASbHPJey503RhSiGiH2A/edit?usp=sharing">Daily Scrum Chats</a></li>
 <li>Sprint board update: Sprint board ekran görüntüsü: </li>
+
+<img src="https://drive.google.com/file/d/1o96NyLNwffmAAnJmkxAne5PTYseeUZpp/view?usp=sharing" alt="Sprint board ekran görüntüsü">
+
+
+
 <li></li>
 
