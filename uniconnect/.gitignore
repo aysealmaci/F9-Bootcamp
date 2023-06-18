@@ -30,13 +30,6 @@
 .pub-cache/
 .pub/
 /build/
-firebase_options.dart
-android/*
-build/*
-ios/*
-web/*
-windows/*
-ghost_folder/*
 
 # Web related
 lib/generated_plugin_registrant.dart
