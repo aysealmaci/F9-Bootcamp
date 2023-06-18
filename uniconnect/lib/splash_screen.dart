@@ -11,10 +11,6 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 5), () {
-      Navigator.push(
-          context, MaterialPageRoute(builder: ((context) => WelcomePage())));
-    });
   }
 
   Widget build(BuildContext context) {
@@ -25,7 +21,7 @@ class _SplashState extends State<Splash> {
                 image: AssetImage(
                   "assets/splash.jpeg",
                 ),
-                fit: BoxFit.contain)),
+                fit: BoxFit.fill)),
       ),
     );
   }
