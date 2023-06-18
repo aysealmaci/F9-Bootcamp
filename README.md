@@ -19,11 +19,11 @@ UniConnect
 <li>Daily Scrum: Daily Scrum toplantılarının zamansal nedenlerden dolayı whatsapp üzerinden yapılmasına karar verildi. Bazı daily scrum toplantıları Discord üzerinden gerçekleşti. Daily Scrum toplantılarından bazı ekran görüntüleri paylaşılan Google doc üzerinden incelenebilir: <a href="https://docs.google.com/document/d/1yGjhoHgQCITzUuw37A3ZoLZASbHPJey503RhSiGiH2A/edit?usp=sharing">Daily Scrum Chats</a></li>
 
 <li>Sprint board update: Sprint board ekran görüntüsü: </li>
-![board](https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/a5236b70-6afd-43e2-ab14-60d0d2c75497)
+<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/a5236b70-6afd-43e2-ab14-60d0d2c75497">
 
 <li>Ürün Durumu: Splash Screen Ekran Görüntüsü</li>
-![screenshot](https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/e05f4f44-6e1a-4ac4-86cb-fffed1d70ae7)
 
+<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/e05f4f44-6e1a-4ac4-86cb-fffed1d70ae7" width="300" height="550">
 <h2>Product Backlog URL</h2>
 <a href="https://trello.com/b/B6H3xK9i/g%C3%B6rev-da%C4%9F%C4%B1l%C4%B1m%C4%B1">Trello Linkimiz</a>
 
