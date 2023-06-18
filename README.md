@@ -16,5 +16,10 @@ UniConnect
 <a href="https://trello.com/b/B6H3xK9i/g%C3%B6rev-da%C4%9F%C4%B1l%C4%B1m%C4%B1">Trello Linkimiz</a>
 
 <h1>Sprint 1</h1>
+<li>Sprint Notları: User Story'ler</li>
+<li>Sprint içinde tamamlanması tahmin edilen puan: 50 puan</li>
+<li>Puan tamamlama mantığı: Projede tamamlanması gereken toplam 400 puanlık backlog bulunmaktadır. Araştırma yapma, proje konusuna karar verme gibi durumların yanı sıra takım üyelerinin final takvimi bu sprintte 50 puanın tamamlanması gerektiğine karar verildi./li>
+<li>Daily Scrum: Daily Scrum toplantılarının zamansal nedenlerden dolayı whatsapp üzerinden yapılmasına karar verildi. Bazı daily scrum toplantıları Discord üzerinden gerçekleşti. Daily Scrum toplantılarından bazı ekran görüntüleri paylaşılan Google doc üzerinden incelenebilir: <a href="https://docs.google.com/document/d/1yGjhoHgQCITzUuw37A3ZoLZASbHPJey503RhSiGiH2A/edit?usp=sharing">Daily Scrum Chats</a></li>
+<li>Sprint board update: Sprint board ekran görüntüsü: </li>
+<li></li>
 
-<a href="https://docs.google.com/document/d/1yGjhoHgQCITzUuw37A3ZoLZASbHPJey503RhSiGiH2A/edit?usp=sharing">Daily Scrum Chats</a>
