@@ -15,5 +15,6 @@ UniConnect
 <h2>Product Backlog URL</h2>
 <a href="https://trello.com/invite/b/B6H3xK9i/ATTIfd04a17be126cc573fb1802ad672dad1FFA4076E/gorev-dagilimi">Trello Linkimiz</a>
 
+<h1>Sprint 1</h1>
 
-
+<a href="https://docs.google.com/document/d/1yGjhoHgQCITzUuw37A3ZoLZASbHPJey503RhSiGiH2A/edit?usp=sharing">Daily Scrum Chats</a>
