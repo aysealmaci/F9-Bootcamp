@@ -36,6 +36,7 @@ build/*
 ios/*
 web/*
 windows/*
+ghost_folder/*
 
 # Web related
 lib/generated_plugin_registrant.dart

@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:uniconnect/firebase_options.dart';
+import 'package:uniconnect/ghost_folder/firebase_options.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
