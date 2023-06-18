@@ -13,7 +13,7 @@ F09 - Kod Şövalyeleri
 UniConnect
 
 <h2>Product Backlog URL</h2>
-<a href="https://trello.com/invite/b/B6H3xK9i/ATTIfd04a17be126cc573fb1802ad672dad1FFA4076E/gorev-dagilimi">Trello Linkimiz</a>
+<a href="https://trello.com/b/B6H3xK9i/g%C3%B6rev-da%C4%9F%C4%B1l%C4%B1m%C4%B1">Trello Linkimiz</a>
 
 <h1>Sprint 1</h1>
 
