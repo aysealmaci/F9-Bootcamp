@@ -12,6 +12,16 @@ F09 - Kod Şövalyeleri
 <h2>Ürün İsmi</h2>
 UniConnect
 
+<h2>Ürün Açıklaması</h2>
+Üniversite öğrencilerinin birbirleri ile iletişimde olabileceği, gerek spesifik bir ders hakkında gerekse sosyal konularda öğrencilere yardımcı olacak bir app. Örneğin şehre yeni gelen birinin öğrenci dostu kafeler hangileri sorusunu sorabildiği, mezun olan birisinin elindeki kitap ya da 2.el eşyaları birine vermek için duyuru yayınlayabildiği, bir dersi alan ya da daha önceden almış öğrencilerden tavsiye/yardım istediği ya da o gün derse katılamamasından dolayı kaçırdığı bir noktayı sorabildiği kısacası UniConnect bir üniversite öğrencisinin hayatını pek çok yönde kolaylaştırmayı hedefleyen bir uygulamadır.
+
+<h2>Ürün Özellikleri</h2>
+<li>İnsanların ana sayfaya paylaşım yapabilmeleri</li>
+<li>İnsanların bu paylaşımlara cevap verebilmeleri</li>
+
+<h2>Hedef Kitle</h2>
+Üniversite öğrencileri
+
 <h1>Sprint 1</h1>
 <li>Sprint Notları: User Story'ler</li>
 <li>Sprint içinde tamamlanması tahmin edilen puan: 50 puan</li>
@@ -24,13 +34,15 @@ UniConnect
 <li>Ürün Durumu: Splash Screen Ekran Görüntüsü</li>
 
 <img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/e05f4f44-6e1a-4ac4-86cb-fffed1d70ae7" width="300" height="550">
-<h2>Product Backlog URL</h2>
-<a href="https://trello.com/b/B6H3xK9i/g%C3%B6rev-da%C4%9F%C4%B1l%C4%B1m%C4%B1">Trello Linkimiz</a>
 
 <li>Sprint Review: Alınan kararlar: Birkaç sayfanın UI tasarımları hazırlanmış, Splash Screen kodlanmış, uygulamanın firebase'e bağlanması sağlanmış, uygulama için veritabanı olarak firebase servisleri aktif edilmiş ve eksiklikler değerlendirilmiştir. Sprint Review katılımcıları: Ayşe Almacı</li>
 
 <li>Sprint Retrospective:
-<ul></ul>
+<ul>Herkesin kendini geliştirmesi gereken noktalar konuşulmuştur.</ul>
+<ul>Final haftası sebebi ile aksayan çalışmaları telafi etmek için sprint 2'de nasıl çalışmamız gerektiği konuşulmuştur .</ul>
+  
+<h2>Product Backlog URL</h2>
+<a href="https://trello.com/b/B6H3xK9i/g%C3%B6rev-da%C4%9F%C4%B1l%C4%B1m%C4%B1">Trello Linkimiz</a>
 
 </li>
 
