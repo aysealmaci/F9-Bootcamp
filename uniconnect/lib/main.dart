@@ -1,8 +1,13 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:uniconnect/firebase_options.dart';
+import 'package:uniconnect/screens/anasayfa.dart';
+import 'package:uniconnect/screens/dersdisi.dart';
+import 'package:uniconnect/screens/dersici.dart';
 import 'package:uniconnect/screens/login.dart';
 import 'package:uniconnect/screens/splash.dart';
+import 'package:uniconnect/screens/welcome.dart';
+import 'package:uniconnect/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SplashScreen(),
+      home: Splash(),
       debugShowCheckedModeBanner: false,
     );
   }
