@@ -87,13 +87,12 @@ ilk ekran görüntüsünün devamı olan 2.ekran görüntüsü:
 
 Uygulamamızın içinden kısa bir video: 
 
-<a href="https://drive.google.com/file/d/1LTvDOxiaBVv6Tso7eN3WZFM-FfauywAl/view?usp=sharing 
-">Lütfen izlemek için tıklayın</a>
+<a href="https://drive.google.com/file/d/1LTvDOxiaBVv6Tso7eN3WZFM-FfauywAl/view?usp=sharing">Lütfen izlemek için tıklayın</a>
 
 
 
 
-<li>Sprint Review: ... Sprint Review katılımcıları: Ayşe Almacı</li>
+<li>Sprint Review: Alınan Kararlar: Tasarımlar hazırlanmış, nerdeyse tüm tasarımlar eksiksiz kodlanmıştır. Eksikler değerlendirilmiştir.Takımım performansı değerlendirilmiştir. Sprint Review katılımcıları: Ayşe Almacı</li>
 
 <li>Sprint Retrospective:
 <ul>Tasarımların daha iyi hale nasıl gelebileceği konuşulmuştur.</ul>
