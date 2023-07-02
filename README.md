@@ -83,9 +83,9 @@ ilk ekran görüntüsünün devamı olan 2.ekran görüntüsü:
 <ul>Kayıt Ol Sayfası Ekran Görüntüsü</ul>
 <img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/6ee11b5b-d34b-421c-b318-3944705518b4" width="300" height="550">
 
-Uygulamamızın içinden kısa bir video: 
 
-<a href="https://drive.google.com/file/d/1LTvDOxiaBVv6Tso7eN3WZFM-FfauywAl/view?usp=sharing">Lütfen izlemek için tıklayın</a>
+<a href="https://drive.google.com/file/d/1LTvDOxiaBVv6Tso7eN3WZFM-FfauywAl/view?usp=sharing">Uygulamamızın bir video izlemek için tıklayın</a>
+
 Userflow:
 <img width="4432" alt="Userflow_1" src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/638f33d4-83d6-486f-920e-86c166e80fe2">
 
