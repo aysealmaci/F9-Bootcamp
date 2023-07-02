@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:uniconnect/firebase_options.dart';
 import 'package:uniconnect/screens/login.dart';
+import 'package:uniconnect/screens/register.dart';
 import 'package:uniconnect/screens/splash.dart';
 
 void main() async {

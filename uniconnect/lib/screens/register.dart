@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:uniconnect/auth.dart';
-import 'package:uniconnect/screens/register.dart';
+import 'package:uniconnect/screens/login.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({Key? key}) : super(key: key);
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   Auth authService = Auth();
-  final TextEditingController emailcontroller = TextEditingController();
-  final TextEditingController passwordcontroller = TextEditingController();
+  TextEditingController namecontroller = TextEditingController();
+  TextEditingController emailcontroller = TextEditingController();
+  TextEditingController passwordcontroller = TextEditingController();
   static const Color darkBlue = Color(0xff294c92);
   static const Color lightBlue = Color(0xff00b0ff);
   static const Color textColor = Color(0xff2d279d);
@@ -53,20 +54,49 @@ class _LoginPageState extends State<LoginPage> {
                         Padding(
                           padding: const EdgeInsets.only(top: 5),
                           child:
-                              Text("Lütfen paylaşım yapabilmek için Giriş Yap!",
+                              Text("Lütfen paylaşım yapabilmek için Kayıt Ol!",
                                   style: TextStyle(
                                     fontSize: 15,
                                     color: darkBlue,
                                   )),
                         ),
                         SizedBox(height: 25),
-                        Text("Giriş Yap",
+                        Text("Kayıt Ol",
                             style: TextStyle(
                                 color: textColor,
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold)),
                         SizedBox(
                           height: 20,
+                        ),
+                        Container(
+                          height: 40,
+                          width: 250,
+                          decoration: BoxDecoration(
+                            border: Border.all(width: 1, color: Colors.white),
+                            color: Colors.transparent,
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                          ),
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 15.0),
+                            child: TextField(
+                              controller: namecontroller,
+                              obscureText: false,
+                              style: TextStyle(fontSize: 15, color: darkBlue),
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: "Ad Soyad",
+                                hintStyle: TextStyle(
+                                  color: darkBlue,
+                                ),
+                                prefixIcon: Icon(Icons.person, color: darkBlue),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
                         ),
                         Container(
                           height: 40,
@@ -123,19 +153,6 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 10),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 135),
-                          child: GestureDetector(
-                              /*onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => sifremiUnuttum(),
-                            )),*/
-                              child: Text("Şifreni mi Unuttun?",
-                                  style: TextStyle(
-                                    fontSize: 13,
-                                    color: textColor,
-                                  ))),
-                        ),
                         SizedBox(
                           height: 20,
                         ),
@@ -148,8 +165,9 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           child: OutlinedButton(
                               onPressed: () {
-                                authService.signIn(
+                                authService.addUser(
                                     context,
+                                    namecontroller.text,
                                     emailcontroller.text,
                                     passwordcontroller.text);
                               },
@@ -160,7 +178,7 @@ class _LoginPageState extends State<LoginPage> {
                                 ),
                               ),
                               child: Text(
-                                "Giriş Yap",
+                                "Kayıt Ol",
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 15,
@@ -170,33 +188,23 @@ class _LoginPageState extends State<LoginPage> {
                         SizedBox(
                           height: 15,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 10.0),
-                              child: Container(
-                                height: 1.0,
-                                width: 93.0,
-                                color: darkBlue,
-                              ),
-                            ),
-                            Text(
-                              " Ya da ",
-                              style: TextStyle(
-                                  color: darkBlue,
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 10.0),
-                              child: Container(
-                                height: 1.0,
-                                width: 93.0,
-                                color: darkBlue,
-                              ),
-                            ),
-                          ],
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 10.0),
+                          child: Container(
+                            height: 1.0,
+                            width: 250.0,
+                            color: darkBlue,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Text(
+                          " Ya da aşağıdaki yöntemlerle devam et",
+                          style: TextStyle(
+                              color: darkBlue,
+                              fontSize: 13,
+                              fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
                           height: 10,
@@ -234,16 +242,16 @@ class _LoginPageState extends State<LoginPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              "Hesabın yok mu? ",
+                              "Zaten bir hesabın var mı? ",
                               style: TextStyle(color: textColor, fontSize: 13),
                             ),
                             GestureDetector(
                                 onTap: () => Navigator.of(context)
                                         .push(MaterialPageRoute(
-                                      builder: (context) => RegisterPage(),
+                                      builder: (context) => LoginPage(),
                                     )),
                                 child: Text(
-                                  "Şimdi Kaydol!",
+                                  "Giriş Yap!",
                                   style: TextStyle(
                                       color: textColor,
                                       fontSize: 13,
