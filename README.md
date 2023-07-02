@@ -52,7 +52,7 @@ UniConnect
 <li>Sprint içinde tamamlanması tahmin edilen puan: 220 puan</li>
 <li>Puan tamamlama mantığı: Projede tamamlanması gereken toplam 400 puanlık backlog bulunmaktadır. 220 puanın tamamlanması gerektiğine karar verildi. Bunun 30 puanı auth işlemleri, 100 puanı temel sayfaların tasarımı, 90 puanı temel sayfaların tasarımlarının kodlanması hakkındadır./li>
   
-<li>Daily Scrum: Daily Scrum toplantılarının zamansal nedenlerden dolayı whatsapp üzerinden yapılmasına karar verildi. Bazı daily scrum toplantıları Discord üzerinden gerçekleşti. Daily Scrum toplantılarından bazı ekran görüntüleri paylaşılan Google doc üzerinden incelenebilir: <a href="https://docs.google.com/document/d/1yGjhoHgQCITzUuw37A3ZoLZASbHPJey503RhSiGiH2A/edit?usp=sharing">Daily Scrum Chats</a></li>
+<li>Daily Scrum: Daily Scrum toplantılarının zamansal nedenlerden dolayı sprint 1 de olduğu gibi whatsapp üzerinden yapılmasına karar verildi. Bazı daily scrum toplantıları Discord üzerinden gerçekleşti. Daily Scrum toplantılarından bazı ekran görüntüleri paylaşılan Google doc üzerinden incelenebilir: <a href="https://docs.google.com/document/d/1K9evkeBKv3gWC2hZSDmxvkip2LUfWXM_dNJ3ufbFOVY/edit?usp=sharing">Daily Scrum Chats</a></li>
 
 <li>Sprint board update: Sprint board ekran görüntüsü: </li>
 kırmızılar taskları, maviler user story'leri temsil etmektedir.
@@ -84,7 +84,7 @@ ilk ekran görüntüsünün devamı olan 2.ekran görüntüsü:
 <img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/6ee11b5b-d34b-421c-b318-3944705518b4" width="300" height="550">
 
 
-<a href="https://drive.google.com/file/d/1LTvDOxiaBVv6Tso7eN3WZFM-FfauywAl/view?usp=sharing">Uygulamamızın bir video izlemek için tıklayın</a>
+<a href="https://drive.google.com/file/d/1LTvDOxiaBVv6Tso7eN3WZFM-FfauywAl/view?usp=sharing">Uygulamamızın içinden kısa bir video izlemek için tıklayın</a>
 
 Userflow:
 <img width="4432" alt="Userflow_1" src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/638f33d4-83d6-486f-920e-86c166e80fe2">
