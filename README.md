@@ -47,9 +47,7 @@ UniConnect
 </li>
 
 <h1>Sprint 2</h1>
-<li>Sprint Notları: User Story'ler</li>
-
-.....
+<li>Sprint Notları: User Story'ler. Ek olarak bu sprintte 1.sprintte final haftası nedeni ile oluşan zaman kaybını bayram tatiline rağmen telafi edilmiştir. Takım eksikleri üzerine kendini geliştirmiştir.</li>
 
 <li>Sprint içinde tamamlanması tahmin edilen puan: 220 puan</li>
 <li>Puan tamamlama mantığı: Projede tamamlanması gereken toplam 400 puanlık backlog bulunmaktadır. 220 puanın tamamlanması gerektiğine karar verildi. Bunun 30 puanı auth işlemleri, 100 puanı temel sayfaların tasarımı, 90 puanı temel sayfaların tasarımlarının kodlanması hakkındadır./li>
