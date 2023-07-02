@@ -86,8 +86,8 @@ ilk ekran görüntüsünün devamı olan 2.ekran görüntüsü:
 Uygulamamızın içinden kısa bir video: 
 
 <a href="https://drive.google.com/file/d/1LTvDOxiaBVv6Tso7eN3WZFM-FfauywAl/view?usp=sharing">Lütfen izlemek için tıklayın</a>
-
-
+Userflow:
+<img width="4432" alt="Userflow_1" src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/638f33d4-83d6-486f-920e-86c166e80fe2">
 
 
 <li>Sprint Review: Alınan Kararlar: Tasarımlar hazırlanmış, nerdeyse tüm tasarımlar eksiksiz kodlanmıştır. Eksikler değerlendirilmiştir.Takımım performansı değerlendirilmiştir. Sprint Review katılımcıları: Ayşe Almacı</li>
