@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   void initState() {
     Timer(
-        Duration(milliseconds: 4200),
+        Duration(milliseconds: 4000),
         () => Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => LoginPage())));
 
@@ -184,7 +184,7 @@ class _SplashScreenState extends State<SplashScreen>
           Text(
             'UniConnect',
             style: TextStyle(
-              color: Color(0xff24215a),
+              color: Color(0xff2d279d),
               fontSize: 16,
               fontWeight: FontWeight.bold,
             ),
