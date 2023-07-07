@@ -38,7 +38,7 @@ class _SplashScreenState extends State<SplashScreen>
       ),
     );
 
-    firstCircleRadiusAnimation = Tween<double>(begin: 50, end: 150).animate(
+    firstCircleRadiusAnimation = Tween<double>(begin: 60, end: 150).animate(
       CurvedAnimation(
         parent: firstCircleController,
         curve: Curves.ease,
@@ -72,7 +72,7 @@ class _SplashScreenState extends State<SplashScreen>
       ),
     );
 
-    secondCircleRadiusAnimation = Tween<double>(begin: 50, end: 150).animate(
+    secondCircleRadiusAnimation = Tween<double>(begin: 60, end: 150).animate(
       CurvedAnimation(
         parent: secondCircleController,
         curve: Curves.ease,
@@ -106,7 +106,7 @@ class _SplashScreenState extends State<SplashScreen>
       ),
     );
 
-    thirdCircleRadiusAnimation = Tween<double>(begin: 50, end: 150).animate(
+    thirdCircleRadiusAnimation = Tween<double>(begin: 60, end: 150).animate(
       CurvedAnimation(
         parent: thirdCircleController,
         curve: Curves.ease,
@@ -184,8 +184,9 @@ class _SplashScreenState extends State<SplashScreen>
           Text(
             'UniConnect',
             style: TextStyle(
+              fontFamily: "Lobster",
               color: Color(0xff2d279d),
-              fontSize: 16,
+              fontSize: 17,
               fontWeight: FontWeight.bold,
             ),
           ),
