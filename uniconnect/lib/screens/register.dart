@@ -10,7 +10,6 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
-  Auth authService = Auth();
   TextEditingController namecontroller = TextEditingController();
   TextEditingController emailcontroller = TextEditingController();
   TextEditingController passwordcontroller = TextEditingController();
@@ -34,9 +33,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     child: Text(
                       "UniConnect",
                       style: TextStyle(
-                          fontFamily: "Lobster",
-                          fontSize: 30,
-                          color: textColor),
+                          fontFamily: "Lobster", fontSize: 30, color: darkBlue),
                     )),
                 Container(
                   child: Column(
@@ -145,7 +142,7 @@ class _RegisterPageState extends State<RegisterPage> {
                               ),
                               decoration: InputDecoration(
                                 border: InputBorder.none,
-                                hintText: "Şifre",
+                                hintText: "Parola",
                                 hintStyle: TextStyle(color: darkBlue),
                                 prefixIcon:
                                     Icon(Icons.password, color: darkBlue),
@@ -165,11 +162,12 @@ class _RegisterPageState extends State<RegisterPage> {
                           ),
                           child: OutlinedButton(
                               onPressed: () {
-                                authService.addUser(
-                                    context,
-                                    namecontroller.text,
-                                    emailcontroller.text,
-                                    passwordcontroller.text);
+                                Auth().addUser(
+                                  context,
+                                  namecontroller.text,
+                                  emailcontroller.text,
+                                  passwordcontroller.text,
+                                );
                               },
                               style: OutlinedButton.styleFrom(
                                 foregroundColor: darkBlue,
@@ -219,18 +217,16 @@ class _RegisterPageState extends State<RegisterPage> {
                                 color: darkBlue,
                                 size: 30,
                               ),
-                              GestureDetector(
+                              InkWell(
+                                onTap: () => Auth().signInWithGoogle(),
                                 child: Container(
                                     decoration: BoxDecoration(
                                         shape: BoxShape.circle,
                                         color: darkBlue),
                                     height: 30,
                                     width: 30,
-                                    child: Icon(
-                                      Icons.email,
-                                      color: Colors.white,
-                                      size: 20,
-                                    )),
+                                    child: Image.asset(
+                                        "assets/images/google.png")),
                               ),
                             ],
                           ),
@@ -245,7 +241,7 @@ class _RegisterPageState extends State<RegisterPage> {
                               "Zaten bir hesabın var mı? ",
                               style: TextStyle(color: textColor, fontSize: 13),
                             ),
-                            GestureDetector(
+                            InkWell(
                                 onTap: () => Navigator.of(context)
                                         .push(MaterialPageRoute(
                                       builder: (context) => LoginPage(),
@@ -282,14 +278,6 @@ class _RegisterPageState extends State<RegisterPage> {
                     fit: BoxFit.cover,
                   )),
             ),
-            Container(
-                decoration: const BoxDecoration(
-              color: Colors.black,
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(100),
-                bottomRight: Radius.circular(100),
-              ),
-            )),
           ]),
         ),
       )),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:uniconnect/auth.dart';
 import 'package:uniconnect/screens/register.dart';
+import 'package:uniconnect/screens/reset_password.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -10,7 +11,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  Auth authService = Auth();
   final TextEditingController emailcontroller = TextEditingController();
   final TextEditingController passwordcontroller = TextEditingController();
   static const Color darkBlue = Color(0xff294c92);
@@ -33,9 +33,7 @@ class _LoginPageState extends State<LoginPage> {
                     child: Text(
                       "UniConnect",
                       style: TextStyle(
-                          fontFamily: "Lobster",
-                          fontSize: 30,
-                          color: textColor),
+                          fontFamily: "Lobster", fontSize: 30, color: darkBlue),
                     )),
                 Container(
                   child: Column(
@@ -115,7 +113,7 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                               decoration: InputDecoration(
                                 border: InputBorder.none,
-                                hintText: "Şifre",
+                                hintText: "Parola",
                                 hintStyle: TextStyle(color: darkBlue),
                                 prefixIcon:
                                     Icon(Icons.password, color: darkBlue),
@@ -126,10 +124,11 @@ class _LoginPageState extends State<LoginPage> {
                         SizedBox(height: 10),
                         Padding(
                           padding: const EdgeInsets.only(right: 135),
-                          child: GestureDetector(
-                              /*onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => sifremiUnuttum(),
-                            )),*/
+                          child: InkWell(
+                              onTap: () =>
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => ResetPassword(),
+                                  )),
                               child: Text("Şifreni mi Unuttun?",
                                   style: TextStyle(
                                     fontSize: 13,
@@ -148,10 +147,11 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           child: OutlinedButton(
                               onPressed: () {
-                                authService.signIn(
-                                    context,
-                                    emailcontroller.text,
-                                    passwordcontroller.text);
+                                Auth().signIn(
+                                  context,
+                                  emailcontroller.text,
+                                  passwordcontroller.text,
+                                );
                               },
                               style: OutlinedButton.styleFrom(
                                 foregroundColor: darkBlue,
@@ -211,18 +211,16 @@ class _LoginPageState extends State<LoginPage> {
                                 color: darkBlue,
                                 size: 30,
                               ),
-                              GestureDetector(
+                              InkWell(
+                                onTap: () => Auth().signInWithGoogle(),
                                 child: Container(
                                     decoration: BoxDecoration(
                                         shape: BoxShape.circle,
                                         color: darkBlue),
                                     height: 30,
                                     width: 30,
-                                    child: Icon(
-                                      Icons.email,
-                                      color: Colors.white,
-                                      size: 20,
-                                    )),
+                                    child: Image.asset(
+                                        "assets/images/google.png")),
                               ),
                             ],
                           ),
@@ -237,7 +235,7 @@ class _LoginPageState extends State<LoginPage> {
                               "Hesabın yok mu? ",
                               style: TextStyle(color: textColor, fontSize: 13),
                             ),
-                            GestureDetector(
+                            InkWell(
                                 onTap: () => Navigator.of(context)
                                         .push(MaterialPageRoute(
                                       builder: (context) => RegisterPage(),
@@ -274,14 +272,6 @@ class _LoginPageState extends State<LoginPage> {
                     fit: BoxFit.cover,
                   )),
             ),
-            Container(
-                decoration: const BoxDecoration(
-              color: Colors.black,
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(100),
-                bottomRight: Radius.circular(100),
-              ),
-            )),
           ]),
         ),
       )),
