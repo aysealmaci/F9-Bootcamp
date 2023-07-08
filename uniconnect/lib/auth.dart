@@ -1,7 +1,11 @@
+import 'dart:typed_data';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:uniconnect/Firebase_method/storage.dart';
 import 'package:uniconnect/custom_widgets/error_message.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:uniconnect/model/userModel.dart';
 import 'package:uniconnect/screens/anasayfa.dart';
 import 'package:uniconnect/screens/login.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -83,7 +87,7 @@ class Auth {
   }
 
   Future<void> addUser(
-      BuildContext context, String name, String email, String password) async {
+      BuildContext context, String name, String email, String password,Uint8List file) async {
     String? result;
     if (name.trim().isEmpty) {
       result = "Ad soyad boş bırakılamaz.";
@@ -93,12 +97,24 @@ class Auth {
       result = "Parola boş bırakılamaz.";
     } else {
       try {
-        var user = await FirebaseAuth.instance
-            .createUserWithEmailAndPassword(email: email, password: password);
+        var user = await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password);
+
+
+        String photoUrl = await StorageMethod().photoAddStorage('userProfile', file, false);
+
+        UserModel userModel = UserModel(
+          name: name,
+          email: email,
+          password: password,
+          photoUrl: photoUrl,
+          uid: user.user!.uid
+        );
+
+
         FirebaseFirestore.instance
             .collection('user')
             .doc(user.user!.uid)
-            .set({'name': name, 'email': email});
+            .set(userModel.toJson());
         result = "success";
       } on FirebaseAuthException catch (error) {
         result = error.code;
@@ -115,7 +131,7 @@ class Auth {
       } else if (result == "invalid-email") {
         errorMessage.cherry_toast(
             context, "HATA", "Geçersiz email.", Icons.info, Colors.red);
-      } else if (result == "Email boş bırakılamaz." ||
+      }else if (result == "Email boş bırakılamaz." ||
           result == "Parola boş bırakılamaz." ||
           result == "Ad soyad boş bırakılamaz.") {
         return errorMessage.cherry_toast(
