@@ -14,6 +14,14 @@ class Auth {
   final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
   ErrorMessage errorMessage = ErrorMessage();
 
+  Future<UserModel> firebaseUserDetails() async{
+    User? user = firebaseAuth.currentUser;
+
+    DocumentSnapshot documentSnapshot = await FirebaseFirestore.instance.collection("user").doc(user!.uid).get();
+
+    return UserModel.fromSnap(documentSnapshot);
+  }
+
   Future<void> signIn(
       BuildContext context, String email, String password) async {
     String? result;

@@ -16,6 +16,22 @@ class _LoginPageState extends State<LoginPage> {
   static const Color darkBlue = Color(0xff294c92);
   static const Color lightBlue = Color(0xff00b0ff);
   static const Color textColor = Color(0xff2d279d);
+  bool isLoading = false;
+
+  void login() async {
+    setState(() {
+      isLoading = true;
+    });
+    await Auth().signIn(
+      context,
+      emailcontroller.text,
+      passwordcontroller.text,
+    );
+    setState(() {
+      isLoading = false;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -146,26 +162,24 @@ class _LoginPageState extends State<LoginPage> {
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                           ),
                           child: OutlinedButton(
-                              onPressed: () {
-                                Auth().signIn(
-                                  context,
-                                  emailcontroller.text,
-                                  passwordcontroller.text,
-                                );
-                              },
+                              onPressed: login,
                               style: OutlinedButton.styleFrom(
                                 foregroundColor: darkBlue,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10),
                                 ),
                               ),
-                              child: Text(
-                                "Giriş Yap",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                ),
-                              )),
+                              child: isLoading
+                                  ? Center(
+                                      child: CircularProgressIndicator(color: Colors.white,),
+                                    )
+                                  : Text(
+                                      "Giriş Yap",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 15,
+                                      ),
+                                    )),
                         ),
                         SizedBox(
                           height: 15,

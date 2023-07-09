@@ -24,30 +24,6 @@ class _RegisterPageState extends State<RegisterPage> {
   Uint8List? _img;
   bool isLoading = false;
 
-  takePicture() async {
-    Uint8List _file = await selectPickImage(ImageSource.gallery);
-    setState(() {
-      _img = _file;
-    });
-  }
-
-  // signUpUser() async{
-  //   var res = await Auth().addUser(context, namecontroller.text, emailcontroller.text, passwordcontroller.text, _img!);
-  //   switch (res) {
-  //     case 'success':
-  //       _selectPost(context);
-  //       break;
-  //     case 'fail':
-  //     CherryToast(
-  //       title: Text('Lütfen bir profil resmi seçin'),
-  //       icon: Icons.photo,
-  //       themeColor: Colors.white,
-  //     );
-  //     break;
-  //     default:
-  //   }
-  // }
-
   _selectPost(BuildContext context) async {
     return showDialog(
       context: context,
@@ -183,7 +159,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                 ),
                                 _img == null
                                     ? GestureDetector(
-                                        onTap: takePicture,
+                                        onTap: () => _selectPost(context),
                                         child: CircleAvatar(
                                           maxRadius: 30,
                                           backgroundImage: NetworkImage(
@@ -191,7 +167,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                         ),
                                       )
                                     : GestureDetector(
-                                        onTap: takePicture,
+                                        onTap: () => _selectPost(context),
                                         child: CircleAvatar(
                                           maxRadius: 30,
                                           backgroundImage: MemoryImage(_img!),
@@ -314,7 +290,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                               BorderRadius.circular(10),
                                         ),
                                       ),
-                                      child: isLoading ? Center(child: CircularProgressIndicator(),) : Text(
+                                      child: isLoading ? Center(child: CircularProgressIndicator(color: Colors.white,),) : Text(
                                         "Kayıt Ol",
                                         style: TextStyle(
                                           color: Colors.white,
@@ -430,7 +406,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   Center(
                     child: _img == null
                         ? GestureDetector(
-                            onTap: takePicture,
+                            onTap: () => _selectPost(context),
                             child: CircleAvatar(
                               maxRadius: 60,
                               backgroundImage: NetworkImage(
@@ -438,7 +414,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             ),
                           )
                         : GestureDetector(
-                            onTap: takePicture,
+                            onTap: () => _selectPost(context),
                             child: CircleAvatar(
                               maxRadius: 60,
                               backgroundImage: MemoryImage(_img!),
