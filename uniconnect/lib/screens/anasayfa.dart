@@ -1,7 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:uniconnect/Provider/provider.dart';
+import 'package:uniconnect/screens/dersdisi.dart';
+import 'package:uniconnect/screens/dersici.dart';
 
-class AnaSayfa extends StatelessWidget {
+class AnaSayfa extends StatefulWidget {
   const AnaSayfa({Key? key}) : super(key: key);
+
+  @override
+  State<AnaSayfa> createState() => _AnaSayfaState();
+}
+
+class _AnaSayfaState extends State<AnaSayfa> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    userGet();
+  }
+
+  userGet() async{
+    AppProvider appProvider = Provider.of(context,listen: false);
+    await appProvider.providerUserGet();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -94,23 +116,33 @@ class AnaSayfa extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Container(
-                height: 200,
-                width: appSize.width / 2.5,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(35),
-                    border: Border.all(color: Colors.black),
-                    color: const Color.fromARGB(255, 255, 255, 255)),
-                child: Center(child: Text("Ders İçi")),
+              GestureDetector(
+                onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => Dersici(),));
+                },
+                child: Container(
+                  height: 200,
+                  width: appSize.width / 2.5,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(35),
+                      border: Border.all(color: Colors.black),
+                      color: const Color.fromARGB(255, 255, 255, 255)),
+                  child: Center(child: Text("Ders İçi")),
+                ),
               ),
-              Container(
-                height: 200,
-                width: appSize.width / 2.5,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(35),
-                    border: Border.all(color: Colors.black),
-                    color: const Color.fromARGB(255, 255, 255, 255)),
-                child: Center(child: Text("Ders Dışı")),
+              GestureDetector(
+                onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => Dersdisi(),));
+                },
+                child: Container(
+                  height: 200,
+                  width: appSize.width / 2.5,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(35),
+                      border: Border.all(color: Colors.black),
+                      color: const Color.fromARGB(255, 255, 255, 255)),
+                  child: Center(child: Text("Ders Dışı")),
+                ),
               )
             ],
           )

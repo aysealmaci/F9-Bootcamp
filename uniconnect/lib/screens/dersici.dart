@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uniconnect/screens/Add_Post/add_post_screen.dart';
 
 class Dersici extends StatefulWidget {
   const Dersici({Key? key}) : super(key: key);
@@ -144,6 +145,12 @@ class _DersiciState extends State<Dersici> {
           )
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => AddPostScreen(),));
+        },
+        child: Icon(Icons.add),
+        ),
     );
   }
 }
