@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uniconnect/screens/Add_Post/add_post_screen_two.dart';
+import 'package:uniconnect/screens/anasayfa.dart';
 
 class Dersdisi extends StatefulWidget {
   const Dersdisi({Key? key}) : super(key: key);
@@ -9,6 +10,9 @@ class Dersdisi extends StatefulWidget {
 }
 
 class _DersdisiState extends State<Dersdisi> {
+  static const Color darkBlue = Color(0xff294c92);
+  static const Color lightBlue = Color(0xff00b0ff);
+  static const Color textColor = Color(0xff2d279d);
   @override
   Widget build(BuildContext context) {
     Size appSize = MediaQuery.of(context).size;
@@ -32,10 +36,7 @@ class _DersdisiState extends State<Dersdisi> {
                   child: Text(
                     "UniConnect",
                     style: TextStyle(
-                        color: Color.fromARGB(255, 33, 8, 99),
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                        fontStyle: FontStyle.italic),
+                        fontFamily: "Lobster", fontSize: 30, color: darkBlue),
                   ),
                 ),
                 Padding(
@@ -57,7 +58,13 @@ class _DersdisiState extends State<Dersdisi> {
                                         borderRadius:
                                             BorderRadius.circular(30)),
                                     child: TextButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      AnaSayfa()));
+                                        },
                                         child: Row(
                                           children: [
                                             Icon(
@@ -134,9 +141,12 @@ class _DersdisiState extends State<Dersdisi> {
                           ],
                         ),
                       ),
-                      Icon(
-                        Icons.color_lens,
-                        size: 200,
+                      Container(
+                        height: 100,
+                        child: Image.asset(
+                          "assets/images/ders_disi.png",
+                          fit: BoxFit.cover,
+                        ),
                       )
                     ],
                   ),
@@ -147,11 +157,13 @@ class _DersdisiState extends State<Dersdisi> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){
-          Navigator.of(context).push(MaterialPageRoute(builder: (context) => AddPostScreenTwo(),));
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => AddPostScreenTwo(),
+          ));
         },
         child: Icon(Icons.add),
-        ),
+      ),
     );
   }
 }

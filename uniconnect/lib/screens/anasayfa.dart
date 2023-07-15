@@ -12,7 +12,6 @@ class AnaSayfa extends StatefulWidget {
 }
 
 class _AnaSayfaState extends State<AnaSayfa> {
-
   @override
   void initState() {
     // TODO: implement initState
@@ -20,11 +19,14 @@ class _AnaSayfaState extends State<AnaSayfa> {
     userGet();
   }
 
-  userGet() async{
-    AppProvider appProvider = Provider.of(context,listen: false);
+  userGet() async {
+    AppProvider appProvider = Provider.of(context, listen: false);
     await appProvider.providerUserGet();
   }
 
+  static const Color darkBlue = Color(0xff294c92);
+  static const Color lightBlue = Color(0xff00b0ff);
+  static const Color textColor = Color(0xff2d279d);
   @override
   Widget build(BuildContext context) {
     Size appSize = MediaQuery.of(context).size;
@@ -36,10 +38,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
             child: Text(
               "UniConnect",
               style: TextStyle(
-                  color: Color.fromARGB(255, 33, 8, 99),
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic),
+                  fontFamily: "Lobster", fontSize: 30, color: darkBlue),
             ),
           ),
           Padding(
@@ -117,8 +116,10 @@ class _AnaSayfaState extends State<AnaSayfa> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               GestureDetector(
-                onTap: (){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => Dersici(),));
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => Dersici(),
+                  ));
                 },
                 child: Container(
                   height: 200,
@@ -131,8 +132,10 @@ class _AnaSayfaState extends State<AnaSayfa> {
                 ),
               ),
               GestureDetector(
-                onTap: (){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => Dersdisi(),));
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => Dersdisi(),
+                  ));
                 },
                 child: Container(
                   height: 200,

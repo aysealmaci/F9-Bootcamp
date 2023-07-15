@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:uniconnect/Provider/provider.dart';
 import 'package:uniconnect/firebase_options.dart';
+import 'package:uniconnect/screens/anasayfa.dart';
+import 'package:uniconnect/screens/dersdisi.dart';
 import 'package:uniconnect/screens/dersici.dart';
+import 'package:uniconnect/screens/login.dart';
 import 'package:uniconnect/screens/reset_password.dart';
 import 'package:uniconnect/screens/splash.dart';
 
@@ -20,10 +23,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => AppProvider(),)
+        ChangeNotifierProvider(
+          create: (context) => AppProvider(),
+        )
       ],
       child: MaterialApp(
-        home: SplashScreen(),
+        home: AnaSayfa(),
         debugShowCheckedModeBanner: false,
       ),
     );

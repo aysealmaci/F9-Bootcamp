@@ -171,7 +171,9 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                               child: isLoading
                                   ? Center(
-                                      child: CircularProgressIndicator(color: Colors.white,),
+                                      child: CircularProgressIndicator(
+                                        color: Colors.white,
+                                      ),
                                     )
                                   : Text(
                                       "Giriş Yap",
