@@ -132,7 +132,10 @@ devamı
 Ek olarak tasarımsal bilgiler için bunları inceleyebilirsiniz:
 ![typography](https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/aca5506e-6edf-4731-8ff7-2336833e8139)
 ![wireframe](https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/a0f5b3bd-1f3b-4f3d-b72e-4898c37155e8)
+<img width="4432" alt="Userflow_1" src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/401666d3-a6c2-4dea-ad35-4f7098939d07">
 
+
+<img width="4912" alt="uygulama bilgileri için bilgi sayfası" src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/2595bfd4-e6bd-452c-ab2c-171146bef027">
 
 
 
