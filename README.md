@@ -1,3 +1,5 @@
+![wireframe](https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/55c358f7-90bf-4a3c-855a-13f85304e0ac)
+<img width="4912" alt="uygulama bilgileri için bilgi sayfası" src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/6c722ffd-1aec-4d47-842f-a389b6b97f20">
 <h1>Takım İsmi</h1>
 F09 - Kod Şövalyeleri
 
@@ -126,6 +128,13 @@ devamı
 
 <h2>Product Backlog URL</h2>
 <a href="https://trello.com/b/IUNaZCku/g%C3%B6rev-da%C4%9F%C4%B1l%C4%B1m%C4%B1-sprint-3">Trello Linkimiz</a>
+
+Ek olarak tasarımsal bilgiler için bunları inceleyebilirsiniz:
+![typography](https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/aca5506e-6edf-4731-8ff7-2336833e8139)
+![wireframe](https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/a0f5b3bd-1f3b-4f3d-b72e-4898c37155e8)
+
+
+
 
 </li>
 
