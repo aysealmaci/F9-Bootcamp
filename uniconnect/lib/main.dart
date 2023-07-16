@@ -5,6 +5,7 @@ import 'package:uniconnect/Provider/provider.dart';
 import 'package:uniconnect/custom_widgets/navigation_bar.dart';
 import 'package:uniconnect/firebase_options.dart';
 import 'package:uniconnect/screens/opening_page.dart';
+import 'package:uniconnect/screens/splash.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
