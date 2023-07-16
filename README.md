@@ -134,7 +134,7 @@ Ek olarak tasarımsal bilgiler için bunları inceleyebilirsiniz:
 ![typography](https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/aca5506e-6edf-4731-8ff7-2336833e8139)
 ![Component 1](https://github.com/aysealmaci/F9-Bootcamp/assets/88984118/1bd23dd9-7650-43e2-a267-46e0c9b71397)
 
-<img width="4432" alt="Userflow_1" src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/401666d3-a6c2-4dea-ad35-4f7098939d07">
+<img width="7466" alt="Userflow f9 2 Versiyon" src="https://github.com/aysealmaci/F9-Bootcamp/assets/88984118/68688009-2d23-4d06-bd6b-b67cdb6cf8a7">
 
 
 <img width="4912" alt="uygulama bilgileri için bilgi sayfası" src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/2595bfd4-e6bd-452c-ab2c-171146bef027">
