@@ -1,6 +1,5 @@
 import 'dart:typed_data';
-
-import 'package:cherry_toast/cherry_toast.dart';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:uniconnect/auth.dart';
@@ -14,7 +13,152 @@ class RegisterPage extends StatefulWidget {
   State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _RegisterPageState extends State<RegisterPage> {
+class _RegisterPageState extends State<RegisterPage>
+    with TickerProviderStateMixin {
+  late AnimationController firstCircleController;
+  late AnimationController secondCircleController;
+  late AnimationController thirdCircleController;
+  late Animation<double> firstCircleRadiusAnimation;
+  late Animation<double> firstCircleOpacityAnimation;
+  late Animation<double> firstCircleWidthAnimation;
+  late Animation<double> secondCircleRadiusAnimation;
+  late Animation<double> secondCircleOpacityAnimation;
+  late Animation<double> secondCircleWidthAnimation;
+  late Animation<double> thirdCircleRadiusAnimation;
+  late Animation<double> thirdCircleOpacityAnimation;
+  late Animation<double> thirdCircleWidthAnimation;
+
+  @override
+  void initState() {
+    firstCircleController = AnimationController(
+      vsync: this,
+      duration: Duration(
+        seconds: 2,
+      ),
+    );
+
+    firstCircleRadiusAnimation = Tween<double>(begin: 70, end: 150).animate(
+      CurvedAnimation(
+        parent: firstCircleController,
+        curve: Curves.ease,
+      ),
+    )..addStatusListener((status) {
+        if (status == AnimationStatus.completed) {
+          firstCircleController.repeat();
+        } else if (status == AnimationStatus.dismissed) {
+          firstCircleController.forward();
+        }
+      });
+
+    firstCircleOpacityAnimation = Tween<double>(begin: 1, end: 0).animate(
+      CurvedAnimation(
+        parent: firstCircleController,
+        curve: Curves.ease,
+      ),
+    );
+
+    firstCircleWidthAnimation = Tween<double>(begin: 10, end: 0).animate(
+      CurvedAnimation(
+        parent: firstCircleController,
+        curve: Curves.ease,
+      ),
+    );
+
+    secondCircleController = AnimationController(
+      vsync: this,
+      duration: Duration(
+        seconds: 2,
+      ),
+    );
+
+    secondCircleRadiusAnimation = Tween<double>(begin: 70, end: 150).animate(
+      CurvedAnimation(
+        parent: secondCircleController,
+        curve: Curves.ease,
+      ),
+    )..addStatusListener((status) {
+        if (status == AnimationStatus.completed) {
+          secondCircleController.repeat();
+        } else if (status == AnimationStatus.dismissed) {
+          secondCircleController.forward();
+        }
+      });
+
+    secondCircleOpacityAnimation = Tween<double>(begin: 1, end: 0).animate(
+      CurvedAnimation(
+        parent: secondCircleController,
+        curve: Curves.ease,
+      ),
+    );
+
+    secondCircleWidthAnimation = Tween<double>(begin: 10, end: 0).animate(
+      CurvedAnimation(
+        parent: secondCircleController,
+        curve: Curves.ease,
+      ),
+    );
+
+    thirdCircleController = AnimationController(
+      vsync: this,
+      duration: Duration(
+        seconds: 2,
+      ),
+    );
+
+    thirdCircleRadiusAnimation = Tween<double>(begin: 70, end: 150).animate(
+      CurvedAnimation(
+        parent: thirdCircleController,
+        curve: Curves.ease,
+      ),
+    )..addStatusListener((status) {
+        if (status == AnimationStatus.completed) {
+          thirdCircleController.repeat();
+        } else if (status == AnimationStatus.dismissed) {
+          thirdCircleController.forward();
+        }
+      });
+
+    thirdCircleOpacityAnimation = Tween<double>(begin: 1, end: 0).animate(
+      CurvedAnimation(
+        parent: thirdCircleController,
+        curve: Curves.ease,
+      ),
+    )..addListener(
+        () {
+          setState(() {});
+        },
+      );
+
+    thirdCircleWidthAnimation = Tween<double>(begin: 10, end: 0).animate(
+      CurvedAnimation(
+        parent: thirdCircleController,
+        curve: Curves.ease,
+      ),
+    );
+
+    firstCircleController.forward();
+    Timer(
+      Duration(milliseconds: 765),
+      () => secondCircleController.forward(),
+    );
+
+    Timer(
+      Duration(milliseconds: 1050),
+      () => thirdCircleController.forward(),
+    );
+
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    firstCircleController.dispose();
+    secondCircleController.dispose();
+    thirdCircleController.dispose();
+
+    super.dispose();
+  }
+
   TextEditingController namecontroller = TextEditingController();
   TextEditingController emailcontroller = TextEditingController();
   TextEditingController passwordcontroller = TextEditingController();
@@ -78,7 +222,7 @@ class _RegisterPageState extends State<RegisterPage> {
       );
     }
 
-    var res = await Auth().addUser(
+    await Auth().addUser(
       context,
       namecontroller.text,
       emailcontroller.text,
@@ -86,19 +230,6 @@ class _RegisterPageState extends State<RegisterPage> {
       _img!,
     );
 
-    switch (res) {
-      case 'success':
-        _selectPost(context);
-        break;
-      case 'fail':
-        CherryToast(
-          title: Text('Bir hata oluştu'),
-          icon: Icons.photo,
-          themeColor: Colors.white,
-        );
-        break;
-      default:
-    }
     setState(() {
       isLoading = false;
     });
@@ -108,7 +239,8 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-        backgroundColor: Colors.white,
+        resizeToAvoidBottomInset: false,
+        backgroundColor: _img == null ? lightBlue : Colors.white,
         body: _img != null
             ? SafeArea(
                 child: Center(
@@ -148,14 +280,14 @@ class _RegisterPageState extends State<RegisterPage> {
                                         color: darkBlue,
                                       )),
                                 ),
-                                SizedBox(height: 25),
+                                SizedBox(height: 20),
                                 Text("Kayıt Ol",
                                     style: TextStyle(
                                         color: textColor,
                                         fontSize: 18,
                                         fontWeight: FontWeight.bold)),
                                 SizedBox(
-                                  height: 20,
+                                  height: 10,
                                 ),
                                 _img == null
                                     ? GestureDetector(
@@ -174,7 +306,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                         ),
                                       ),
                                 SizedBox(
-                                  height: 12,
+                                  height: 10,
                                 ),
                                 Container(
                                   height: 40,
@@ -290,13 +422,19 @@ class _RegisterPageState extends State<RegisterPage> {
                                               BorderRadius.circular(10),
                                         ),
                                       ),
-                                      child: isLoading ? Center(child: CircularProgressIndicator(color: Colors.white,),) : Text(
-                                        "Kayıt Ol",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 15,
-                                        ),
-                                      )),
+                                      child: isLoading
+                                          ? Center(
+                                              child: CircularProgressIndicator(
+                                                color: Colors.white,
+                                              ),
+                                            )
+                                          : Text(
+                                              "Kayıt Ol",
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 15,
+                                              ),
+                                            )),
                                 ),
                                 SizedBox(
                                   height: 15,
@@ -323,30 +461,16 @@ class _RegisterPageState extends State<RegisterPage> {
                                 SizedBox(
                                   height: 10,
                                 ),
-                                SizedBox(
-                                  width: 150,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
-                                    children: [
-                                      Icon(
-                                        Icons.facebook,
-                                        color: darkBlue,
-                                        size: 30,
-                                      ),
-                                      InkWell(
-                                        onTap: () => Auth().signInWithGoogle(),
-                                        child: Container(
-                                            decoration: BoxDecoration(
-                                                shape: BoxShape.circle,
-                                                color: darkBlue),
-                                            height: 30,
-                                            width: 30,
-                                            child: Image.asset(
-                                                "assets/images/google.png")),
-                                      ),
-                                    ],
-                                  ),
+                                InkWell(
+                                  onTap: () => Auth().signInWithGoogle(),
+                                  child: Container(
+                                      decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: darkBlue),
+                                      height: 30,
+                                      width: 30,
+                                      child: Image.asset(
+                                          "assets/images/google.png")),
                                 ),
                                 SizedBox(
                                   height: 15,
@@ -400,29 +524,127 @@ class _RegisterPageState extends State<RegisterPage> {
                   ]),
                 ),
               ))
-            : Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Center(
-                    child: _img == null
-                        ? GestureDetector(
-                            onTap: () => _selectPost(context),
-                            child: CircleAvatar(
-                              maxRadius: 60,
-                              backgroundImage: NetworkImage(
-                                  'https://images.unsplash.com/photo-1682685795557-976f03aca7b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80'),
-                            ),
-                          )
-                        : GestureDetector(
-                            onTap: () => _selectPost(context),
-                            child: CircleAvatar(
-                              maxRadius: 60,
-                              backgroundImage: MemoryImage(_img!),
-                            ),
+            : SafeArea(
+                child: SingleChildScrollView(
+                  child: Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(
+                            top: 100,
+                            bottom: 20,
                           ),
+                          child: Text('Başlamadan Önce',
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: textColor,
+                                fontWeight: FontWeight.bold,
+                              )),
+                        ),
+                        Padding(
+                          padding:
+                              EdgeInsets.only(bottom: size.height / 2 - 200),
+                          child: Text('Profil Resmi Seç',
+                              style: TextStyle(
+                                fontSize: 15,
+                                color: textColor,
+                                fontWeight: FontWeight.bold,
+                              )),
+                        ),
+                        _img == null
+                            ? Stack(
+                                alignment: Alignment.center,
+                                children: [
+                                  GestureDetector(
+                                    onTap: () => _selectPost(context),
+                                    child: CircleAvatar(
+                                      maxRadius: 60,
+                                      backgroundImage: NetworkImage(
+                                          'https://images.unsplash.com/photo-1682685795557-976f03aca7b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80'),
+                                    ),
+                                  ),
+                                  CustomPaint(
+                                    painter: MyPainter(
+                                      firstCircleRadiusAnimation.value,
+                                      firstCircleOpacityAnimation.value,
+                                      firstCircleWidthAnimation.value,
+                                      secondCircleRadiusAnimation.value,
+                                      secondCircleOpacityAnimation.value,
+                                      secondCircleWidthAnimation.value,
+                                      thirdCircleRadiusAnimation.value,
+                                      thirdCircleOpacityAnimation.value,
+                                      thirdCircleWidthAnimation.value,
+                                    ),
+                                  ),
+                                ],
+                              )
+                            : GestureDetector(
+                                onTap: () => _selectPost(context),
+                                child: CircleAvatar(
+                                  maxRadius: 60,
+                                  backgroundImage: MemoryImage(_img!),
+                                ),
+                              )
+                      ],
+                    ),
                   ),
-                  Text('Profil Resmi Seç')
-                ],
+                ),
               ));
+  }
+}
+
+class MyPainter extends CustomPainter {
+  final double firstCircleRadius;
+  final double firstCircleOpacity;
+  final double firstCircleStrokeWidth;
+  final double secondCircleRadius;
+  final double secondCircleOpacity;
+  final double secondCircleStrokeWidth;
+  final double thirdCircleRadius;
+  final double thirdCircleOpacity;
+  final double thirdCircleStrokeWidth;
+
+  MyPainter(
+    this.firstCircleRadius,
+    this.firstCircleOpacity,
+    this.firstCircleStrokeWidth,
+    this.secondCircleRadius,
+    this.secondCircleOpacity,
+    this.secondCircleStrokeWidth,
+    this.thirdCircleRadius,
+    this.thirdCircleOpacity,
+    this.thirdCircleStrokeWidth,
+  );
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    Color myColor = Colors.white;
+
+    Paint firstPaint = Paint();
+    firstPaint.color = myColor.withOpacity(firstCircleOpacity);
+    firstPaint.style = PaintingStyle.stroke;
+    firstPaint.strokeWidth = firstCircleStrokeWidth;
+
+    canvas.drawCircle(Offset.zero, firstCircleRadius, firstPaint);
+
+    Paint secondPaint = Paint();
+    secondPaint.color = myColor.withOpacity(secondCircleOpacity);
+    secondPaint.style = PaintingStyle.stroke;
+    secondPaint.strokeWidth = secondCircleStrokeWidth;
+
+    canvas.drawCircle(Offset.zero, secondCircleRadius, secondPaint);
+
+    Paint thirdPaint = Paint();
+    thirdPaint.color = myColor.withOpacity(thirdCircleOpacity);
+    thirdPaint.style = PaintingStyle.stroke;
+    thirdPaint.strokeWidth = thirdCircleStrokeWidth;
+
+    canvas.drawCircle(Offset.zero, thirdCircleRadius, thirdPaint);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return true;
   }
 }

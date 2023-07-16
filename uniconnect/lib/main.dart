@@ -3,11 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:uniconnect/Provider/provider.dart';
 import 'package:uniconnect/firebase_options.dart';
-import 'package:uniconnect/screens/anasayfa.dart';
-import 'package:uniconnect/screens/dersdisi.dart';
-import 'package:uniconnect/screens/dersici.dart';
-import 'package:uniconnect/screens/login.dart';
-import 'package:uniconnect/screens/reset_password.dart';
 import 'package:uniconnect/screens/splash.dart';
 
 void main() async {
@@ -28,7 +23,7 @@ class MyApp extends StatelessWidget {
         )
       ],
       child: MaterialApp(
-        home: AnaSayfa(),
+        home: SplashScreen(),
         debugShowCheckedModeBanner: false,
       ),
     );
