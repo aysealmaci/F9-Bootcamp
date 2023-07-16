@@ -1,4 +1,4 @@
-(![Component 1](https://github.com/aysealmaci/F9-Bootcamp/assets/88984118/7d759485-7b4e-4791-a5d6-e81b24685fd5)
+![Component 1](https://github.com/aysealmaci/F9-Bootcamp/assets/88984118/7d759485-7b4e-4791-a5d6-e81b24685fd5)
 
 <img width="4912" alt="uygulama bilgileri için bilgi sayfası" src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/6c722ffd-1aec-4d47-842f-a389b6b97f20">
 <h1>Takım İsmi</h1>
