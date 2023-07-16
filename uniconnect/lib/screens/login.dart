@@ -217,29 +217,14 @@ class _LoginPageState extends State<LoginPage> {
                         SizedBox(
                           height: 10,
                         ),
-                        SizedBox(
-                          width: 150,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Icon(
-                                Icons.facebook,
-                                color: darkBlue,
-                                size: 30,
-                              ),
-                              InkWell(
-                                onTap: () => Auth().signInWithGoogle(),
-                                child: Container(
-                                    decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        color: darkBlue),
-                                    height: 30,
-                                    width: 30,
-                                    child: Image.asset(
-                                        "assets/images/google.png")),
-                              ),
-                            ],
-                          ),
+                        InkWell(
+                          onTap: () => Auth().signInWithGoogle(),
+                          child: Container(
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle, color: darkBlue),
+                              height: 30,
+                              width: 30,
+                              child: Image.asset("assets/images/google.png")),
                         ),
                         SizedBox(
                           height: 15,
