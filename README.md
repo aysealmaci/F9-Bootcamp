@@ -52,7 +52,7 @@ UniConnect
 <li>Sprint içinde tamamlanması tahmin edilen puan: 220 puan</li>
 <li>Puan tamamlama mantığı: Projede tamamlanması gereken toplam 400 puanlık backlog bulunmaktadır. 220 puanın tamamlanması gerektiğine karar verildi. Bunun 30 puanı auth işlemleri, 100 puanı temel sayfaların tasarımı, 90 puanı temel sayfaların tasarımlarının kodlanması hakkındadır./li>
   
-<li>Daily Scrum: Daily Scrum toplantılarının zamansal nedenlerden dolayı sprint 1 de olduğu gibi whatsapp üzerinden yapılmasına karar verildi. Bazı daily scrum toplantıları Discord üzerinden gerçekleşti. Daily Scrum toplantılarından bazı ekran görüntüleri paylaşılan Google doc üzerinden incelenebilir: <a href="https://docs.google.com/document/d/1K9evkeBKv3gWC2hZSDmxvkip2LUfWXM_dNJ3ufbFOVY/edit?usp=sharing">Daily Scrum Chats</a></li>
+<li>Daily Scrum: Daily Scrum toplantılarının zamansal nedenlerden dolayı sprint 1 de olduğu gibi whatsapp üzerinden yapılmasına karar verildi. Bazı daily scrum toplantıları Discord üzerinden gerçekleşti. Daily Scrum toplantılarından bazı ekran görüntüleri paylaşılan Google doc üzerinden incelenebilir: <a href="https://docs.google.com/document/d/1TeEmtX0F4R4DuQwigHyRtPoFm4DcCEIraci2CQeNOr4/edit?usp=sharing">Daily Scrum Chats</a></li>
 
 <li>Sprint board update: Sprint board ekran görüntüsü: </li>
 kırmızılar taskları, maviler user story'leri temsil etmektedir.
