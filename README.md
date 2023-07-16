@@ -102,13 +102,19 @@ Userflow:
 </li>
 
 <h1>Sprint 3</h1>
-<li>Sprint Notları: User Story'ler</li>
+<li>Sprint Notları: User Story</li>
 <li>Sprint içinde tamamlanması tahmin edilen puan: 130 puan</li>
 <li>Puan tamamlama mantığı: Projede tamamlanması gereken toplam 400 puanlık backlog bulunmaktadır. Bu sprintte geriye kalan 130 puan tamamlandı./li>
 <li>Daily Scrum: Daily Scrum toplantılarının zamansal nedenlerden dolayı whatsapp üzerinden yapılmasına karar verildi. Daily Scrum toplantılarından bazı ekran görüntüleri paylaşılan Google doc üzerinden incelenebilir: <a href="https://docs.google.com/document/d/1THwaEqpPa0IS8OLZi4GBdtEa_B2a4IjMKi0SJY9-pNQ/edit?usp=sharing">Daily Scrum Chats</a></li>
 
 <li>Sprint board update: Sprint board ekran görüntüsü: </li>
-<img src="">
+kırmızılar taskları, maviler user story'leri temsil etmektedir.
+Pek çok görev olmasından dolayı board'un 2 ekran görüntüsü bulunmakta. 
+
+<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/36a94db9-e656-40ea-a007-8c3310140ccd">
+devamı
+<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/3ad9f3a3-7184-484a-ac43-1938de12f5ee">
+
 
 <li>Ürün Durumu:</li>
 <a href="https://docs.google.com/document/d/1S6xO1FnkEB5OI3JjmwoWNV6RgACsO37SpTy3sQgEJDw/edit?usp=sharing">Bu linkten ekran görüntülerine ulaşabilirsiniz</a>
