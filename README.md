@@ -107,6 +107,17 @@ Userflow:
 <li>Puan tamamlama mantığı: Projede tamamlanması gereken toplam 400 puanlık backlog bulunmaktadır. Bu sprintte geriye kalan 130 puan tamamlandı./li>
 <li>Daily Scrum: Daily Scrum toplantılarının zamansal nedenlerden dolayı whatsapp üzerinden yapılmasına karar verildi. Daily Scrum toplantılarından bazı ekran görüntüleri paylaşılan Google doc üzerinden incelenebilir: <a href="https://docs.google.com/document/d/1THwaEqpPa0IS8OLZi4GBdtEa_B2a4IjMKi0SJY9-pNQ/edit?usp=sharing">Daily Scrum Chats</a></li>
 
+<li>Sprint board update: Sprint board ekran görüntüsü: </li>
+<img src="">
+
+<li>Ürün Durumu:</li>
+<a href="https://docs.google.com/document/d/1S6xO1FnkEB5OI3JjmwoWNV6RgACsO37SpTy3sQgEJDw/edit?usp=sharing">Bu linkten ekran görüntülerine ulaşabilirsiniz</a>
+
+<li>Sprint Review: Proje için ekip birbirini tebrik etmiştir. Süreç kutlanmıştır Sprint Review katılımcıları: Ayşe Almacı, Beyza Okatan, Ecem Zavar, Berk Canpolat</li>
+
+<li>Sprint Retrospective:
+<ul>Daha iyi ne olabilirdi, nasıl olabilirdi konuşulmuştur.</ul>
+
 <h2>Product Backlog URL</h2>
 <a href="https://trello.com/b/IUNaZCku/g%C3%B6rev-da%C4%9F%C4%B1l%C4%B1m%C4%B1-sprint-3">Trello Linkimiz</a>
 
