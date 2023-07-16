@@ -7,6 +7,8 @@ import 'package:uniconnect/screens/anasayfa.dart';
 import 'package:uniconnect/screens/dersdisi.dart';
 import 'package:uniconnect/screens/dersici.dart';
 import 'package:uniconnect/screens/login.dart';
+import 'package:uniconnect/screens/opening_page.dart';
+import 'package:uniconnect/screens/profile_page.dart';
 import 'package:uniconnect/screens/reset_password.dart';
 import 'package:uniconnect/screens/splash.dart';
 
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
         )
       ],
       child: MaterialApp(
-        home: AnaSayfa(),
+        home: OpeningPage(),
         debugShowCheckedModeBanner: false,
       ),
     );
