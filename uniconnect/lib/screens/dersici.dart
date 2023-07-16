@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uniconnect/custom_widgets/navigation_bar.dart';
 import 'package:uniconnect/screens/Add_Post/add_post_screen.dart';
 import 'package:uniconnect/screens/profile_page.dart';
 
