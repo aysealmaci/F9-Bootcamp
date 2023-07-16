@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:uniconnect/Firebase_method/storage.dart';
 import 'package:uniconnect/custom_widgets/error_message.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:uniconnect/custom_widgets/navigation_bar.dart';
 import 'package:uniconnect/model/userModel.dart';
 import 'package:uniconnect/screens/anasayfa.dart';
 import 'package:uniconnect/screens/login.dart';
@@ -45,7 +46,7 @@ class Auth {
       case "success":
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => AnaSayfa()),
+          MaterialPageRoute(builder: (context) => A()),
         );
         break;
       case "The password is invalid or the user does not have a password.":

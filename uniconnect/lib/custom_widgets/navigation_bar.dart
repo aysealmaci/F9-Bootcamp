@@ -19,6 +19,7 @@ class _AState extends State<A> {
   Widget build(BuildContext context) {
     return Scaffold(
         bottomNavigationBar: CurvedNavigationBar(
+          backgroundColor: Color(0xff00b0ff),
           key: _bottomNavigationKey,
           items: <Widget>[
             Icon(Icons.home, size: 30),
@@ -32,7 +33,7 @@ class _AState extends State<A> {
           },
         ),
         body: Container(
-          color: Colors.blue,
+          //  color: Color(0xff00b0ff),
           child: getSelected(index: _page),
         ));
   }
