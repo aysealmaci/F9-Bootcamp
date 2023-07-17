@@ -125,7 +125,7 @@ devamı
 <img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/0888786e-5b1b-46c3-b506-f4003ab810a5" width="300" height="550">
 
 <ul>Ders içi Sayfası Ekran Görüntüsü: </ul>
-<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/7437576f-9999-4388-accd-b3a89af96850" width="300" height="550">
+<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/6a6e5ec0-9f82-4dd4-b599-5ad2f5d57b0a" width="300" height="550">
 
 <ul>Splash Sayfası Ekran Görüntüsü: </ul>
 <img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/a0397897-af83-4740-918e-d233e78d8153" width="300" height="550">
@@ -140,10 +140,11 @@ devamı
 <img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/03bc2cf3-a3f3-47d7-aaaf-374577571972" width="300" height="550"> 
 
 <ul>Ders Dışı Sayfası Ekran Görüntüsü: </ul>
-<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/a440f6e0-a33b-4efd-ac37-fdcd9fcd7bc4" width="300" height="550"> 
+<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/eee0020d-2cc1-4060-822a-963eecb7bc9b" width="300" height="550"> 
 
 <ul>Anasayfa Ekran Görüntüsü: </ul>
-<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/0133cc44-95de-4d1a-9dc1-edadfafd946d" width="300" height="550">
+<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/0133cc44-95de-4d1a-9dc1-edadfafd946d" width="300" height="550"> 
+
 
 
 
