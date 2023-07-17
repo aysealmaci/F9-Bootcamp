@@ -124,7 +124,7 @@ devamı
 <ul>Profil Sayfası Ekran Görüntüsü: </ul>
 <img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/0888786e-5b1b-46c3-b506-f4003ab810a5" width="300" height="550">
 
-Ders içi Sayfası
+<ul>Ders içi Sayfası Ekran Görüntüsü: </ul>
 <img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/7437576f-9999-4388-accd-b3a89af96850" width="300" height="550">
 
 <ul>Splash Sayfası Ekran Görüntüsü: </ul>
