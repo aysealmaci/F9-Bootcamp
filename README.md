@@ -120,7 +120,22 @@ devamı
 
 
 <li>Ürün Durumu:</li>
-<a href="https://docs.google.com/document/d/1S6xO1FnkEB5OI3JjmwoWNV6RgACsO37SpTy3sQgEJDw/edit?usp=sharing">Bu linkten ekran görüntülerine ulaşabilirsiniz</a>
+
+
+Profil Sayfası
+![sw](https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/0888786e-5b1b-46c3-b506-f4003ab810a5)
+
+Ders içi Sayfası
+![saz](https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/7437576f-9999-4388-accd-b3a89af96850)
+
+
+![sag](https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/03bc2cf3-a3f3-47d7-aaaf-374577571972)
+![sa5](https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/a440f6e0-a33b-4efd-ac37-fdcd9fcd7bc4)
+![Ekran Alıntısı](https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/0133cc44-95de-4d1a-9dc1-edadfafd946d)
+![250401742-c02adca9-aa9d-4ae2-89a8-fa9bd6cd9598](https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/bef5aa19-8917-4d74-a055-15a12657be96)
+![250401730-6ee11b5b-d34b-421c-b318-3944705518b4](https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/b5428c64-28d4-433a-8c80-fcff8efe21a8)
+![250401707-8f66296b-9841-4c09-a410-fdeca553ee4d](https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/a0397897-af83-4740-918e-d233e78d8153)
+
 
 <li>Sprint Review: Proje için ekip birbirini tebrik etmiştir. Süreç kutlanmıştır Sprint Review katılımcıları: Ayşe Almacı, Beyza Okatan, Ecem Zavar, Berk Canpolat</li>
 
