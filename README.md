@@ -120,17 +120,29 @@ devamı
 
 
 <li>Ürün Durumu:</li>
-Profil Sayfası
+
+<ul>Profil Sayfası Ekran Görüntüsü: </ul>
+
 <img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/0888786e-5b1b-46c3-b506-f4003ab810a5" width="" height="300">
 
 Ders içi Sayfası
 <img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/7437576f-9999-4388-accd-b3a89af96850" width="" height="300">
-Ders Dışı Sayfası
-Splash Sayfası
-Anasayfa
-Giriş Yap Sayfası
-Kayıt Ol Sayfası
-Post Paylaşım Sayfası
+
+<ul>Ders Dışı Sayfası Ekran Görüntüsü: </ul>
+
+<ul>Splash Sayfası Ekran Görüntüsü: </ul>
+<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/a0397897-af83-4740-918e-d233e78d8153" width="" height="300">
+
+<ul>Anasayfa Ekran Görüntüsü: </ul>
+<ul>Giriş Yap Sayfası Ekran Görüntüsü: </ul>
+<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/bef5aa19-8917-4d74-a055-15a12657be96" width="" height="300">
+
+<ul>Kayıt Ol Sayfası Ekran Görüntüsü: </ul>
+<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/b5428c64-28d4-433a-8c80-fcff8efe21a8" width="" height="300">
+
+<ul>Post Paylaşım Sayfası Ekran Görüntüsü: </ul>
+
+
 
 <img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/03bc2cf3-a3f3-47d7-aaaf-374577571972" width="" height="300">
 
@@ -138,11 +150,8 @@ Post Paylaşım Sayfası
 
 <img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/0133cc44-95de-4d1a-9dc1-edadfafd946d" width="" height="300">
 
-<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/bef5aa19-8917-4d74-a055-15a12657be96" width="" height="300">
 
-<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/b5428c64-28d4-433a-8c80-fcff8efe21a8" width="" height="300">
 
-<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/a0397897-af83-4740-918e-d233e78d8153" width="" height="300">
 
 
 <li>Sprint Review: Proje için ekip birbirini tebrik etmiştir. Süreç kutlanmıştır Sprint Review katılımcıları: Ayşe Almacı, Beyza Okatan, Ecem Zavar, Berk Canpolat</li>
