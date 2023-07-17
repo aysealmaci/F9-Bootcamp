@@ -1,3 +1,6 @@
+![Component 1](https://github.com/aysealmaci/F9-Bootcamp/assets/88984118/7d759485-7b4e-4791-a5d6-e81b24685fd5)
+
+<img width="4912" alt="uygulama bilgileri için bilgi sayfası" src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/6c722ffd-1aec-4d47-842f-a389b6b97f20">
 <h1>Takım İsmi</h1>
 F09 - Kod Şövalyeleri
 
@@ -52,7 +55,7 @@ UniConnect
 <li>Sprint içinde tamamlanması tahmin edilen puan: 220 puan</li>
 <li>Puan tamamlama mantığı: Projede tamamlanması gereken toplam 400 puanlık backlog bulunmaktadır. 220 puanın tamamlanması gerektiğine karar verildi. Bunun 30 puanı auth işlemleri, 100 puanı temel sayfaların tasarımı, 90 puanı temel sayfaların tasarımlarının kodlanması hakkındadır./li>
   
-<li>Daily Scrum: Daily Scrum toplantılarının zamansal nedenlerden dolayı sprint 1 de olduğu gibi whatsapp üzerinden yapılmasına karar verildi. Bazı daily scrum toplantıları Discord üzerinden gerçekleşti. Daily Scrum toplantılarından bazı ekran görüntüleri paylaşılan Google doc üzerinden incelenebilir: <a href="https://docs.google.com/document/d/1K9evkeBKv3gWC2hZSDmxvkip2LUfWXM_dNJ3ufbFOVY/edit?usp=sharing">Daily Scrum Chats</a></li>
+<li>Daily Scrum: Daily Scrum toplantılarının zamansal nedenlerden dolayı sprint 1 de olduğu gibi whatsapp üzerinden yapılmasına karar verildi. Bazı daily scrum toplantıları Discord üzerinden gerçekleşti. Daily Scrum toplantılarından bazı ekran görüntüleri paylaşılan Google doc üzerinden incelenebilir: <a href="https://docs.google.com/document/d/1TeEmtX0F4R4DuQwigHyRtPoFm4DcCEIraci2CQeNOr4/edit?usp=sharing">Daily Scrum Chats</a></li>
 
 <li>Sprint board update: Sprint board ekran görüntüsü: </li>
 kırmızılar taskları, maviler user story'leri temsil etmektedir.
@@ -98,6 +101,71 @@ Userflow:
   
 <h2>Product Backlog URL</h2>
 <a href="https://trello.com/b/KZMFZ9V9/g%C3%B6rev-da%C4%9F%C4%B1l%C4%B1m%C4%B1-sprint-2">2.Sprint için Trello Linkimiz</a>
+
+</li>
+
+<h1>Sprint 3</h1>
+<li>Sprint Notları: User Story</li>
+<li>Sprint içinde tamamlanması tahmin edilen puan: 130 puan</li>
+<li>Puan tamamlama mantığı: Projede tamamlanması gereken toplam 400 puanlık backlog bulunmaktadır. Bu sprintte geriye kalan 130 puan tamamlandı./li>
+<li>Daily Scrum: Daily Scrum toplantılarının zamansal nedenlerden dolayı whatsapp üzerinden yapılmasına karar verildi. Daily Scrum toplantılarından bazı ekran görüntüleri paylaşılan Google doc üzerinden incelenebilir: <a href="https://docs.google.com/document/d/1THwaEqpPa0IS8OLZi4GBdtEa_B2a4IjMKi0SJY9-pNQ/edit?usp=sharing">Daily Scrum Chats</a></li>
+
+<li>Sprint board update: Sprint board ekran görüntüsü: </li>
+kırmızılar taskları, maviler user story'leri temsil etmektedir.
+Pek çok görev olmasından dolayı board'un 2 ekran görüntüsü bulunmakta. 
+
+<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/36a94db9-e656-40ea-a007-8c3310140ccd">
+devamı
+<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/3ad9f3a3-7184-484a-ac43-1938de12f5ee">
+
+
+<li>Ürün Durumu:</li>
+
+<ul>Profil Sayfası Ekran Görüntüsü: </ul>
+<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/0888786e-5b1b-46c3-b506-f4003ab810a5" width="300" height="550">
+
+<ul>Ders içi Sayfası Ekran Görüntüsü: </ul>
+<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/6a6e5ec0-9f82-4dd4-b599-5ad2f5d57b0a" width="300" height="550">
+
+<ul>Splash Sayfası Ekran Görüntüsü: </ul>
+<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/a0397897-af83-4740-918e-d233e78d8153" width="300" height="550">
+
+<ul>Giriş Yap Sayfası Ekran Görüntüsü: </ul>
+<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/bef5aa19-8917-4d74-a055-15a12657be96" width="300" height="550">
+
+<ul>Kayıt Ol Sayfası Ekran Görüntüsü: </ul>
+<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/b5428c64-28d4-433a-8c80-fcff8efe21a8" width="300" height="550">
+
+<ul>Post Paylaşım Sayfası Ekran Görüntüsü: </ul>
+<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/03bc2cf3-a3f3-47d7-aaaf-374577571972" width="300" height="550"> 
+
+<ul>Ders Dışı Sayfası Ekran Görüntüsü: </ul>
+<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/eee0020d-2cc1-4060-822a-963eecb7bc9b" width="300" height="550"> 
+
+<ul>Anasayfa Ekran Görüntüsü: </ul>
+<img src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/0133cc44-95de-4d1a-9dc1-edadfafd946d" width="300" height="550"> 
+
+
+
+
+<li>Sprint Review: Proje için ekip birbirini tebrik etmiştir. Süreç kutlanmıştır Sprint Review katılımcıları: Ayşe Almacı, Beyza Okatan, Ecem Zavar, Berk Canpolat</li>
+
+<li>Sprint Retrospective:
+<ul>Daha iyi ne olabilirdi, nasıl olabilirdi konuşulmuştur.</ul>
+
+<h2>Product Backlog URL</h2>
+<a href="https://trello.com/b/IUNaZCku/g%C3%B6rev-da%C4%9F%C4%B1l%C4%B1m%C4%B1-sprint-3">Trello Linkimiz</a>
+
+Ek olarak tasarımsal bilgiler için bunları inceleyebilirsiniz:
+![typography](https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/aca5506e-6edf-4731-8ff7-2336833e8139)
+![Component 1](https://github.com/aysealmaci/F9-Bootcamp/assets/88984118/1bd23dd9-7650-43e2-a267-46e0c9b71397)
+
+<img width="7466" alt="Userflow f9 2 Versiyon" src="https://github.com/aysealmaci/F9-Bootcamp/assets/88984118/68688009-2d23-4d06-bd6b-b67cdb6cf8a7">
+
+
+<img width="4912" alt="uygulama bilgileri için bilgi sayfası" src="https://github.com/aysealmaci/F9-Bootcamp/assets/97750042/2595bfd4-e6bd-452c-ab2c-171146bef027">
+
+
 
 </li>
 

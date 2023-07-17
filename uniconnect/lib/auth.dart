@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:uniconnect/Firebase_method/storage.dart';
 import 'package:uniconnect/custom_widgets/error_message.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:uniconnect/custom_widgets/navigation_bar.dart';
 import 'package:uniconnect/model/userModel.dart';
 import 'package:uniconnect/screens/anasayfa.dart';
 import 'package:uniconnect/screens/login.dart';
@@ -14,10 +15,13 @@ class Auth {
   final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
   ErrorMessage errorMessage = ErrorMessage();
 
-  Future<UserModel> firebaseUserDetails() async{
+  Future<UserModel> firebaseUserDetails() async {
     User? user = firebaseAuth.currentUser;
 
-    DocumentSnapshot documentSnapshot = await FirebaseFirestore.instance.collection("user").doc(user!.uid).get();
+    DocumentSnapshot documentSnapshot = await FirebaseFirestore.instance
+        .collection("user")
+        .doc(user!.uid)
+        .get();
 
     return UserModel.fromSnap(documentSnapshot);
   }
@@ -42,7 +46,7 @@ class Auth {
       case "success":
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => AnaSayfa()),
+          MaterialPageRoute(builder: (context) => A()),
         );
         break;
       case "The password is invalid or the user does not have a password.":
@@ -94,8 +98,8 @@ class Auth {
     }
   }
 
-  Future<void> addUser(
-      BuildContext context, String name, String email, String password,Uint8List file) async {
+  Future<void> addUser(BuildContext context, String name, String email,
+      String password, Uint8List file) async {
     String? result;
     if (name.trim().isEmpty) {
       result = "Ad soyad boş bırakılamaz.";
@@ -105,19 +109,18 @@ class Auth {
       result = "Parola boş bırakılamaz.";
     } else {
       try {
-        var user = await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password);
+        var user = await FirebaseAuth.instance
+            .createUserWithEmailAndPassword(email: email, password: password);
 
-
-        String photoUrl = await StorageMethod().photoAddStorage('userProfile', file, false);
+        String photoUrl =
+            await StorageMethod().photoAddStorage('userProfile', file, false);
 
         UserModel userModel = UserModel(
-          name: name,
-          email: email,
-          password: password,
-          photoUrl: photoUrl,
-          uid: user.user!.uid
-        );
-
+            name: name,
+            email: email,
+            password: password,
+            photoUrl: photoUrl,
+            uid: user.user!.uid);
 
         FirebaseFirestore.instance
             .collection('user')
@@ -131,25 +134,39 @@ class Auth {
     if (context.mounted) {
       print("add user " + result);
 
-      if (result == "success") {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => LoginPage()));
-        errorMessage.cherry_toast(context, "Aramıza Hoşgeldin",
-            "Kayıt olduğun için teşekkürler.", Icons.check, Colors.green);
-      } else if (result == "invalid-email") {
-        errorMessage.cherry_toast(
-            context, "HATA", "Geçersiz email.", Icons.info, Colors.red);
-      }else if (result == "Email boş bırakılamaz." ||
-          result == "Parola boş bırakılamaz." ||
-          result == "Ad soyad boş bırakılamaz.") {
-        return errorMessage.cherry_toast(
-            context, "HATA", result, Icons.info, Colors.red);
-      } else if (result == "weak-password") {
-        return errorMessage.cherry_toast(context, "HATA",
-            "Parola en az 6 karakter içermelidir.", Icons.info, Colors.red);
-      } else if (result == "email-already-in-use") {
-        return errorMessage.cherry_toast(context, "HATA",
-            "Bu email daha önce kullanılmıştır.", Icons.info, Colors.red);
+      switch (result) {
+        case "success":
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => LoginPage()));
+          errorMessage.cherry_toast(context, "Aramıza Hoşgeldin",
+              "Kayıt olduğun için teşekkürler.", Icons.check, Colors.green);
+          break;
+
+        case "invalid-email":
+          errorMessage.cherry_toast(
+              context, "HATA", "Geçersiz email.", Icons.info, Colors.red);
+          break;
+
+        case "Email boş bırakılamaz.":
+        case "Parola boş bırakılamaz.":
+        case "Ad soyad boş bırakılamaz.":
+          errorMessage.cherry_toast(
+              context, "HATA", result, Icons.info, Colors.red);
+          break;
+
+        case "weak-password":
+          errorMessage.cherry_toast(context, "HATA",
+              "Parola en az 6 karakter içermelidir.", Icons.info, Colors.red);
+          break;
+
+        case "email-already-in-use":
+          errorMessage.cherry_toast(context, "HATA",
+              "Bu email daha önce kullanılmıştır.", Icons.info, Colors.red);
+          break;
+        default:
+          errorMessage.cherry_toast(
+              context, "HATA", "", Icons.info, Colors.red);
+          break;
       }
     }
   }
@@ -166,7 +183,7 @@ class Auth {
     } on FirebaseAuthException catch (error) {
       result = error.message.toString();
     }
-
+    print(result);
     switch (result) {
       case "The email address is badly formatted.":
         errorMessage.cherry_toast(
@@ -177,15 +194,16 @@ class Auth {
           Colors.red,
         );
         break;
-      case "":
+      case "Given String is empty or null":
         errorMessage.cherry_toast(
           context,
           "HATA",
-          "Email alanı boş bırakılamaz.",
+          "Email boş bırakılamaz.",
           Icons.info,
           Colors.red,
         );
         break;
+
       case "There is no user record corresponding to this identifier. The user may have been deleted.":
         errorMessage.cherry_toast(
           context,

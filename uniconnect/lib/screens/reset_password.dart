@@ -117,7 +117,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                                 ),
                               ),
                               child: Text(
-                                "İleri",
+                                "Parola Sıfırla",
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 15,
