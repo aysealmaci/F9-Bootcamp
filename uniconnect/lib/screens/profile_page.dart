@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:uniconnect/Provider/provider.dart';
+import 'package:uniconnect/auth.dart';
+import 'package:uniconnect/model/userModel.dart';
 import 'package:uniconnect/screens/dersdisi.dart';
 import 'package:uniconnect/screens/dersici.dart';
+import 'package:uniconnect/screens/dersiciWidget/dersici_main.dart';
+import 'package:uniconnect/screens/login.dart';
+import 'package:uniconnect/screens/splash.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -11,10 +18,11 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final UserModel? user = Provider.of<AppProvider>(context).getUserDetails;
     Size appSize = MediaQuery.of(context).size;
 
     return Scaffold(
-      body: SafeArea(
+      body: user == null ? Center(child: CircularProgressIndicator(),) :  SafeArea(
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -91,17 +99,13 @@ class ProfilePage extends StatelessWidget {
                           child: CircleAvatar(
                             backgroundColor: Colors.white,
                             radius: 50,
-                            child: Icon(
-                              Icons.person,
-                              size: 90,
-                              color: Color.fromARGB(255, 53, 73, 255),
-                            ),
+                            backgroundImage: NetworkImage(user!.photoUrl!),
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(top: 10.0),
                           child: Text(
-                            "Ecem Zavar",
+                            user!.name!,
                             style: TextStyle(
                                 fontSize: 15, fontWeight: FontWeight.bold),
                           ),
@@ -138,7 +142,7 @@ class ProfilePage extends StatelessWidget {
                               width: 10,
                             ),
                             Text(
-                              'kodsovalyeleri@gmail.comm',
+                              user.email!,
                               style: TextStyle(
                                 fontSize: 12,
                               ),
@@ -162,7 +166,7 @@ class ProfilePage extends StatelessWidget {
                         GestureDetector(
                           onTap: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => Dersici(),
+                              builder: (context) => DersiciMain(),
                             ));
                           },
                           child: Container(
@@ -281,7 +285,9 @@ class ProfilePage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Auth().signOut();
+                        },
                         child: Text(
                           'Çıkış Yap',
                           style: TextStyle(
