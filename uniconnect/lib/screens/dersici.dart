@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:uniconnect/screens/Add_Post/add_post_screen.dart';
 
 class Dersici extends StatefulWidget {
-  const Dersici({Key? key}) : super(key: key);
+  final snap;
+  const Dersici({Key? key,required this.snap}) : super(key: key);
 
   @override
   State<Dersici> createState() => _DersiciState();
@@ -12,151 +13,134 @@ class _DersiciState extends State<Dersici> {
   static const Color darkBlue = Color(0xff294c92);
   static const Color lightBlue = Color(0xff00b0ff);
   static const Color textColor = Color(0xff2d279d);
+
+  bool _isLiked = false;
+  bool _isSaved = false;
+  int _commentCount = 0;
+
+  void _toggleLike() {
+    setState(() {
+      _isLiked = !_isLiked;
+    });
+  }
+
+  void _toggleSave() {
+    setState(() {
+      _isSaved = !_isSaved;
+    });
+  }
+
+  void _addComment() {
+    setState(() {
+      _commentCount++;
+    });
+  }
+
+
+
+
+
   @override
   Widget build(BuildContext context) {
     Size appSize = MediaQuery.of(context).size;
-
-    return Scaffold(
-      body: Column(
-        children: [
-          Container(
-            height: appSize.height / 2.4,
-            decoration: BoxDecoration(
-                color: Color.fromARGB(255, 154, 223, 255),
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.zero,
-                    topRight: Radius.zero,
-                    bottomLeft: Radius.circular(50),
-                    bottomRight: Radius.circular(50))),
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 20),
-                  child: Text(
-                    "UniConnect",
-                    style: TextStyle(
-                        fontFamily: "Lobster", fontSize: 30, color: darkBlue),
+       return SafeArea(
+      child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12)
+        ),
+        elevation: 2,
+        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+        child: Container(
+          decoration: BoxDecoration(color: Colors.white),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ListTile(
+                contentPadding:
+                    EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                leading: Container(
+                  padding: EdgeInsets.only(right: 12),
+                  child: 
+                  widget.snap['profImage'] == null ? CircleAvatar(
+                    backgroundColor: Colors.grey,
+                    backgroundImage:
+                        NetworkImage('https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60'), // Profil resmi
+                    radius: 30,
+                  ) : 
+                  CircleAvatar(
+                    backgroundColor: Colors.grey,
+                    backgroundImage:
+                        NetworkImage(widget.snap['profImage']), // Profil resmi
+                    radius: 30,
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      TextButton(
-                          onPressed: () {},
-                          child: Column(
-                            children: [
-                              Row(
-                                children: [
-                                  Container(
-                                    height: 37,
-                                    width: 70,
-                                    decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius:
-                                            BorderRadius.circular(30)),
-                                    child: TextButton(
-                                        onPressed: () {},
-                                        child: Row(
-                                          children: [
-                                            Icon(
-                                              Icons.arrow_back_ios,
-                                              color: Colors.black,
-                                            ),
-                                            Text(
-                                              "Geri",
-                                              style: TextStyle(
-                                                  color: Colors.black),
-                                            ),
-                                          ],
-                                        )),
-                                  )
-                                ],
-                              ),
-                            ],
-                          )),
-                      SizedBox(
-                        height: 60,
-                      ),
-                      TextButton(
-                        onPressed: () {},
-                        child: CircleAvatar(
-                          backgroundColor: Color(0xffE6E6E6),
-                          radius: 30,
-                          child: Icon(
-                            Icons.person,
-                            size: 35,
-                            color: Color.fromARGB(255, 53, 73, 255),
-                          ),
+                title: Text(
+                  widget.snap['name'],
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                subtitle: Text('mesaj.'),
+                trailing: Icon(Icons.more_horiz),
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                child: Text(
+                  widget.snap['description'],
+                  style: TextStyle(fontSize: 16),
+                ),
+              ),
+              Image.network(
+                'https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60', // Kullanıcının paylaştığı fotoğraf
+                fit: BoxFit.cover,
+                width: double.infinity,
+                height: 200,
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        IconButton(
+                          icon: _isLiked
+                              ? Icon(Icons.favorite, color: Colors.red)
+                              : Icon(Icons.favorite_border),
+                          onPressed: _toggleLike,
                         ),
-                      )
-                    ],
+                        IconButton(
+                          icon: _isSaved
+                              ? Icon(Icons.bookmark, color: Colors.blue)
+                              : Icon(Icons.bookmark_border),
+                          onPressed: _toggleSave,
+                        ),
+                      ],
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.comment),
+                      onPressed: _addComment,
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom: 10),
+                    child: Text(
+                      '$_commentCount yorum',
+                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 20, right: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(17.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Ders İçi",
-                              style: TextStyle(
-                                  fontSize: 30,
-                                  fontWeight: FontWeight.bold,
-                                  color: const Color.fromARGB(255, 7, 33, 72)),
-                            ),
-                            SizedBox(
-                              height: 15,
-                            ),
-                            Text(
-                              "Faliyetler Bölümüne",
-                              style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                  color: const Color.fromARGB(255, 7, 33, 72)),
-                            ),
-                            SizedBox(
-                              height: 3,
-                            ),
-                            Text(
-                              "Hoşgeldiniz!",
-                              style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                  color: const Color.fromARGB(255, 7, 33, 72)),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        height: 100,
-                        child: Image.asset(
-                          "assets/images/ders_ici.png",
-                          fit: BoxFit.cover,
-                        ),
-                      )
-                    ],
-                  ),
-                )
-              ],
-            ),
-          )
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.of(context).push(MaterialPageRoute(
-            builder: (context) => AddPostScreen(),
-          ));
-        },
-        child: Icon(Icons.add),
-      ),
+              ),
+            ],
+          ),
+       ),
+       ),
     );
+
   }
 }

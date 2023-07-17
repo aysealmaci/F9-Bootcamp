@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:uniconnect/Provider/provider.dart';
 import 'package:uniconnect/screens/dersdisi.dart';
 import 'package:uniconnect/screens/dersici.dart';
+import 'package:uniconnect/screens/dersiciWidget/dersici_main.dart';
 
 class AnaSayfa extends StatefulWidget {
   const AnaSayfa({Key? key}) : super(key: key);
@@ -118,7 +119,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
               GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => Dersici(),
+                    builder: (context) => DersiciMain(),
                   ));
                 },
                 child: Container(
