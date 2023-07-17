@@ -144,9 +144,14 @@ class _AddPostScreenState extends State<AddPostScreen> {
                                       Icons.arrow_back_ios,
                                       color: Colors.black,
                                     ),
-                                    Text(
-                                      "Geri",
-                                      style: TextStyle(color: Colors.black),
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                      child: Text(
+                                        "Geri",
+                                        style: TextStyle(color: Colors.black),
+                                      ),
                                     ),
                                   ],
                                 )),
@@ -204,7 +209,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                             ],
                           ),
                           Container(
-                            height: 100,
+                            height: 60,
                             child: Image.asset(
                               "assets/images/Arrow2.png",
                               fit: BoxFit.cover,

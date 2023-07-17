@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:uniconnect/Provider/provider.dart';
+import 'package:uniconnect/model/userModel.dart';
 import 'package:uniconnect/screens/dersdisi.dart';
 import 'package:uniconnect/screens/dersici.dart';
 import 'package:uniconnect/screens/dersiciWidget/dersici_main.dart';
@@ -20,6 +21,8 @@ class _AnaSayfaState extends State<AnaSayfa> {
     userGet();
   }
 
+  bool isLoading = false;
+
   userGet() async {
     AppProvider appProvider = Provider.of(context, listen: false);
     await appProvider.providerUserGet();
@@ -30,8 +33,9 @@ class _AnaSayfaState extends State<AnaSayfa> {
   static const Color textColor = Color(0xff2d279d);
   @override
   Widget build(BuildContext context) {
+    final UserModel? user = Provider.of<AppProvider>(context).getUserDetails;
     Size appSize = MediaQuery.of(context).size;
-    return Scaffold(
+    return user == null ? Center(child: CircularProgressIndicator(),) : Scaffold(
       backgroundColor: Color.fromARGB(30, 154, 223, 255),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -54,11 +58,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
                       child: CircleAvatar(
                         backgroundColor: Color(0xffE6E6E6),
                         radius: 30,
-                        child: Icon(
-                          Icons.person,
-                          size: 35,
-                          color: Color.fromARGB(255, 53, 73, 255),
-                        ),
+                        backgroundImage: NetworkImage(user!.photoUrl!),
                       ),
                     ),
                     SizedBox(
@@ -68,7 +68,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Ecem Zavar",
+                          user!.name!,
                           style: TextStyle(
                               fontSize: 15, fontWeight: FontWeight.bold),
                         ),
@@ -85,7 +85,9 @@ class _AnaSayfaState extends State<AnaSayfa> {
                   ],
                 ),
               ),
-                child: Container(
+               Column(
+                children: [
+                  Container(
                   width: appSize.width - 50,
                   height: appSize.height / 5,
                   decoration: BoxDecoration(
@@ -124,7 +126,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                width: 80,
+                                width: 50,
                                 child: Image.asset("assets/images/Arrow 1.png",
                                     fit: BoxFit.cover),
                               ),
@@ -141,7 +143,8 @@ class _AnaSayfaState extends State<AnaSayfa> {
                     ),
                   ),
                 ),
-              ),
+                ],
+               ),
               Padding(
                 padding: const EdgeInsets.all(20),
                 child: Text("Kategoriler",
@@ -156,7 +159,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
                   GestureDetector(
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Dersici(),
+                        builder: (context) => DersiciMain(),
                       ));
                     },
                     child: Container(
@@ -267,10 +270,11 @@ class _AnaSayfaState extends State<AnaSayfa> {
                   )
                 ],
               )
-            ],
-          ),
+            ] 
         ),
-      ),
-    );
+        )
+        
+      )
+          );
   }
 }

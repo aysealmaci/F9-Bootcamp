@@ -1,6 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:uniconnect/Provider/provider.dart';
+import 'package:uniconnect/model/userModel.dart';
 import 'package:uniconnect/screens/Add_Post/add_post_screen.dart';
 import 'package:uniconnect/screens/dersici.dart';
 
@@ -14,6 +17,7 @@ class DersiciMain extends StatefulWidget {
 class _DersiciMainState extends State<DersiciMain> {
   @override
   Widget build(BuildContext context) {
+  final UserModel? user = Provider.of<AppProvider>(context).getUserDetails;
     return Scaffold(
       appBar: AppBar(
         title: Text('UniConnect', style: TextStyle(fontFamily: 'Lobster', fontSize: 25,color: Colors.black),),
@@ -24,8 +28,11 @@ class _DersiciMainState extends State<DersiciMain> {
           Navigator.of(context).pop();
         },child: Icon(Icons.arrow_back,color: Colors.black,)),
         actions: [
-          CircleAvatar(
+          user?.photoUrl == null ? CircleAvatar(
             backgroundImage: NetworkImage('https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60'),
+          ) : 
+          CircleAvatar(
+            backgroundImage: NetworkImage(user!.photoUrl!),
           )
         ],
       ),
