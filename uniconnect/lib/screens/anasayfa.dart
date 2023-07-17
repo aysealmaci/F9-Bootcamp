@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:uniconnect/Provider/provider.dart';
 import 'package:uniconnect/screens/dersdisi.dart';
 import 'package:uniconnect/screens/dersici.dart';
+import 'package:uniconnect/screens/dersiciWidget/dersici_main.dart';
 
 class AnaSayfa extends StatefulWidget {
   const AnaSayfa({Key? key}) : super(key: key);
@@ -84,8 +85,6 @@ class _AnaSayfaState extends State<AnaSayfa> {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 20),
                 child: Container(
                   width: appSize.width - 50,
                   height: appSize.height / 5,
